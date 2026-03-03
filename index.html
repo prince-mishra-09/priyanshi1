@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi Priyanshi! 🎨🌈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <h1 class="romantic-header welcome-title">Happy Holi Meri Jaan! 🎨</h1>
+        <p class="welcome-text">Aaj rang bhi tere naam ke hain, aur dil bhi... 🌈💦</p>
+        <button class="heart-button" onclick="startExperience()">Rang Lagao 🎨💦</button>
+        <div class="click-indicator">
+            <p>👆 Yahan Click Karo 👆</p>
+            <span class="bounce-arrow">⬆️</span>
+        </div>
+    </div>
+
+    <!-- Relationship Timer -->
+    <section id="timer-section" class="section" style="display: none;">
+        <h2 class="romantic-header">Our Colorful Journey Together 🌈</h2>
+        <div class="timer-container" id="love-timer">
+            <div class="timer-box"><span class="timer-number" id="days">00</span><span class="timer-label">Days</span>
+            </div>
+            <div class="timer-box"><span class="timer-number" id="hours">00</span><span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-box"><span class="timer-number" id="minutes">00</span><span
+                    class="timer-label">Minutes</span></div>
+            <div class="timer-box"><span class="timer-number" id="seconds">00</span><span
+                    class="timer-label">Seconds</span></div>
+        </div>
+        <p class="hindi-text" style="margin-top: 30px;">Itne dino se tum meri zindagi mein rango ki baarish la rahi ho!
+            🎨❤️</p>
+        <div class="scroll-indicator">
+            <p>Scroll Karo Neeche 💦</p>
+            <span class="scroll-arrow">⬇️</span>
+        </div>
+    </section>
+
+    <div class="bg-overlay"></div>
+    <canvas id="hearts"></canvas>
+    <audio id="bg-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="main-content">
+        <!-- Gallery Section Header -->
+        <section class="section gallery-header-section">
+            <h2 class="romantic-header gallery-title">Our Rangeen Yaadein 🎨🌈</h2>
+            <p class="hindi-text">Har photo ek rang, har rang ek yaad... 💦</p>
+        </section>
+
+        <!-- Masonry Grid Collage -->
+        <div class="masonry-grid">
+            <div class="masonry-item tall" data-title="Our First Magic 🎨"
+                data-msg="Tum meri duniya ki sabse pyari aur anmol cheez ho. Jab tum saath hoti ho, sab kuch rangeen lagta hai. 🌈">
+                <img src="photo1.jpg" alt="Memory 1">
+                <div class="masonry-overlay">
+                    <h3>Our First Magic 🎨</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="Your Colorful Smile 🌈"
+                data-msg="Jab tum hasti ho na, mera poora din rang jata hai. Tumhari hansi hi meri sabse badi khushi hai. 💦">
+                <img src="photo2.jpg" alt="Memory 2">
+                <div class="masonry-overlay">
+                    <h3>Your Colorful Smile 🌈</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item wide" data-title="Deep In Your Eyes 💜"
+                data-msg="Tumhari aankhon me mujhe saaton rang dikhte hain. Inme kho jana meri sabse pasandida jagah hai. 🎨">
+                <img src="photo3.jpg" alt="Memory 3">
+                <div class="masonry-overlay">
+                    <h3>Deep In Your Eyes 💜</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="Holi Ke Rang 🎉"
+                data-msg="Tere saath har din Holi hai meri jaan. Tu hai toh zindagi mein rang hain, warna sab safed hai. 💦🎨">
+                <img src="photo4.jpg" alt="Memory 4">
+                <div class="masonry-overlay">
+                    <h3>Holi Ke Rang 🎉</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item tall" data-title="Incomplete Without You 💛"
+                data-msg="Tumhare bina mera har ek pal rang-heen hai. Tum hi meri zindagi ki asli raunak ho. 🌈">
+                <img src="photo5.jpg" alt="Memory 5">
+                <div class="masonry-overlay">
+                    <h3>Incomplete Without You 💛</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="Especially For Priyanshi 💖"
+                data-msg="Priyanshi, tum meri life ka sabse khoobsurat rang ho. Tumhare jaisa koi aur nahi ho sakta. 🎨❤️">
+                <img src="photo6.jpg" alt="Memory 6">
+                <div class="masonry-overlay">
+                    <h3>Especially For Priyanshi 💖</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item wide" data-title="Always In My Heart 💜"
+                data-msg="Har pal bas tumhara hi khayal rehta hai. Bhale hi hum thoda lad lein, par pyar ke rang kabhi fade nahi honge. 🌈">
+                <img src="photo7.jpg" alt="Memory 7">
+                <div class="masonry-overlay">
+                    <h3>Always In My Heart 💜</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="Cute When Angry 😍"
+                data-msg="Sacch bataun? Tum gusse me bhi rainbow jaisi lagti ho — colorful aur khoobsurat! 🎨">
+                <img src="photo8.jpg" alt="Memory 8">
+                <div class="masonry-overlay">
+                    <h3>Cute When Angry 😍</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item tall" data-title="Soulmates Forever 💕"
+                data-msg="Humara rishta sabse rangeen hai. Meri har dua me tumhare liye hazaar rang hain. 🌈🎉">
+                <img src="photo9.jpg" alt="Memory 9">
+                <div class="masonry-overlay">
+                    <h3>Soulmates Forever 💕</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="I Love You Forever 💛"
+                data-msg="Chalo ab aao milke Holi khelte hain aur ek sweet si smile do. I Love You Forever and Always! 🎨❤️">
+                <img src="photo10.jpg" alt="Memory 10">
+                <div class="masonry-overlay">
+                    <h3>I Love You Forever 💛</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item wide" data-title="Our Rangeen Mohabbat 🎨"
+                data-msg="Humara saath kabhi na khatam hone wala ek rangeen safar hai. Tum ho toh har din Holi hai. 🌈">
+                <img src="photo11.jpg" alt="Memory 11">
+                <div class="masonry-overlay">
+                    <h3>Our Rangeen Mohabbat 🎨</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="My Everything 💜"
+                data-msg="Zindagi me bohot log aayenge aur jayenge, par meri duniya ke saare rang bas tumse hi shuru hote hain. 🎉">
+                <img src="photo12.jpg" alt="Memory 12">
+                <div class="masonry-overlay">
+                    <h3>My Everything 💜</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item tall" data-title="Chhoti Yaadein, Bade Rang 🎨"
+                data-msg="Ye chhoti-chhoti yaadein hi toh humari zindagi ke sabse khoobsurat rang hain. Inhe hamesha sanjo kar rakhunga. 💦">
+                <img src="photo13.jpg" alt="Memory 13">
+                <div class="masonry-overlay">
+                    <h3>Chhoti Yaadein, Bade Rang 🎨</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item" data-title="The Best Jodi 💕"
+                data-msg="Log misaal dete hain humari, kyunki humara pyar sabse rangeen aur saccha hai. Happy Holi baby! 🌈🎨">
+                <img src="photo14.jpg" alt="Memory 14">
+                <div class="masonry-overlay">
+                    <h3>The Best Jodi 💕</h3>
+                </div>
+            </div>
+
+            <div class="masonry-item wide" data-title="Infinite Colors of Love 🌈"
+                data-msg="Meri duniya ki sabse haseen aurat ko — Happy Holi! Tere pyar ke rang kabhi na dhule! 💦🎨❤️">
+                <img src="photo15.jpg" alt="Memory 15">
+                <div class="masonry-overlay">
+                    <h3>Infinite Colors of Love 🌈</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal">
+        <div class="photo-modal-content">
+            <button class="modal-close" onclick="closePhotoModal()">✕</button>
+            <img id="modal-photo" src="" alt="Memory">
+            <div class="modal-text">
+                <h2 id="modal-title" class="romantic-header"></h2>
+                <p id="modal-msg" class="hindi-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Virtual Pichkari -->
+    <div id="virtual-rose-container" onclick="openRoseModal()">
+        <span class="rose-tooltip">Rang Lagao! 🎨</span>
+        <span class="rose-icon">🎨</span>
+    </div>
+
+    <!-- Holi Special Modal -->
+    <div id="rose-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="romantic-header">Happy Holi Meri Jaan! 🌈</h2>
+            <p class="hindi-text">Ye saare rang tumhare naam... kyunki tum meri zindagi ki sabse khoobsurat rainbow ho!
+                I LOVE YOU! 💦🎨❤️</p>
+            <div style="font-size: 3rem; margin: 15px 0;">🎨💦🌈🎉🟣🟡🔴🟢🔵</div>
+            <button class="heart-button" style="padding: 10px 20px; font-size: 1rem; margin-top: 20px;"
+                onclick="closeRoseModal()">Close 🎨</button>
+        </div>
+    </div>
+
+    <footer style="padding: 50px; text-align: center; color: var(--holi-yellow);">
+        <p>Made with all colors of love, just for Priyanshi. Happy Holi! 🎨🌈❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
